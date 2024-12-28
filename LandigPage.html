@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integrated Homepage</title>
+  <style>
+
+      .binaryImage {
+      width: 950px;
+      height: auto;
+      margin: -180px -20px;
+      transform: translateX(10px);
+      
+    }
+    .title {
+      color: rgba(255, 255, 255, 1);
+      font: 20 19px Camouflage, -apple-system, Roboto, Helvetica, sans-serif;
+      margin: 0px -200px;
+      
+    }
+
+    /* NavigationMenu.css */
+    .navigationList {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transform: translateY(10px);
+      
+    }
+
+    .navigationItem {
+      font-size: 18px;
+      color: white;
+      cursor: pointer;
+      font-family: 'Product Sans', sans-serif;
+      display: block;
+      margin: 8px 0;
+      text-decoration: none;
+      transform: translateY(0px);
+      color: #ffffff; /* Initial text color */
+      text-decoration: none; /* Remove underline */
+      transition: all 0.25s ease; /* Smooth transition for both size and color */
+    }
+
+    .navigationItem:hover {
+    color: #A6FF00; /* Change color to #A6FF00 on hover */
+    transform: scale(1.1); /* Enlarge the text a bit */
+    }
+
+    /* Hero.css */
+    .heroContainer {
+      display: flex;
+      flex-direction: column;
+      align-self: stretch;
+      position: relative;
+      min-height: 1017px;
+      align-items: center;
+      justify-content: center;
+      padding: 47px 80px;
+      background-color: #222;
+    }
+
+    @media (max-width: 991px) {
+      .heroContainer {
+        max-width: 100%;
+        padding: 50px 20px;
+      }
+    }
+
+    .backgroundImage {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: -1;
+    }
+
+    .contentWrapper {
+      position: relative;
+      display: flex;
+      width: 796px;
+      max-width: 100%;
+      flex-direction: column;
+      text-align: center;
+      transform: translateY(-120px);
+    }
+
+   
+
+    .title {
+      color: rgba(255, 255, 255, 1);
+      font: 400 220px Camaufalge, -apple-system, Roboto, Helvetica, sans-serif;
+      transform: translateX(0%) translateY(110px);
+    }
+
+    @media (max-width: 991px) {
+      .title {
+        max-width: 100%;
+        font-size: 40px;
+      }
+    }
+
+    .subtitle {
+      color: rgba(255, 245, 245, 1);
+      margin-top: 20px;
+      font: 300 15px Product Sans Regular-, sans-serif;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(10%) translateY(500%);
+    }
+
+    @media (max-width: 991px) {
+      .subtitle {
+        max-width: 120%;
+        margin-top: 40px;
+      }
+    }
+
+    /* Homepage.css */
+    .mainContainer {
+      background-color: rgba(34, 34, 34, 1);
+      display: flex;
+      align-items: center;
+      gap: 40px 100px;
+      overflow: hidden;
+      flex-wrap: wrap;
+      padding: 0 60px;
+      transform: translateY(-100px);
+    }
+
+    @media (max-width: 991px) {
+      .mainContainer {
+        padding: 0 20px;
+      }
+    }
+
+    .nav-container {
+      background-color: #2C2C2C;
+      width: 60px;
+      height: 270px;
+      border-radius: 17px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+      gap: 33px;
+      position: absolute;
+      right: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .nav-container a {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s;
+    }
+
+    .nav-container a:hover {
+      color: #A6FF00;  
+      transform: scale(1.1);
+    }
+
+    .nav-container img {
+      width: 24px;
+      height: 24px;
+    }
+    // <uniquifier>: Use a unique and descriptive class name
+    // <weight>: Use a value from 100 to 900
+
+    .raleway-<uniquifier> {
+    font-family: "Raleway", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    }
+
+    
+  </style>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+<body>
+  <main class="mainContainer">
+    <!-- NavigationMenu -->
+    <nav class="navigationList">
+      <a class="navigationItem">Home</a>
+      <a class="navigationItem">About</a>
+      <a class="navigationItem">Projects</a>
+      <a class="navigationItem">Blog</a>
+      <a class="navigationItem">Gallery</a>
+    </nav>
+
+    <nav class="nav-container">
+      <a href="https://linkedin.com" target="_blank">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" alt="LinkedIn" style="filter: invert(1);">
+      </a>
+      <a href="https://google.com" target="_blank">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/google.svg" alt="Google" style="filter: invert(1);">
+      </a>
+      <a href="https://github.com" target="_blank">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg" alt="GitHub" style="filter: invert(1);">
+      </a>
+      <a href="https://whatsapp.com" target="_blank">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/whatsapp.svg" alt="WhatsApp" style="filter: invert(1);">
+      </a>
+    </nav>
+
+    <!-- HeroSection -->
+    <section class="heroContainer">
+      <img
+        loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/03153ee0f713ab236065bc9d8a27453a6730d68ea2ec0a2232d27c84ba846f35?placeholderIfAbsent=true&apiKey=b5e8457b61fd45189c010dce3d07586a"
+        class="backgroundImage"
+        alt=""
+      />
+      <div class="contentWrapper">
+        <h2 class="title" style="font-size: 180px; margin: 0;">&nbsp arc 01</h2>
+        
+        <!-- Binary Image -->
+        <img 
+          src="Group 7.svg" 
+          alt="Binary Image" 
+          class="binaryImage"
+        />
+
+        <p class="subtitle">
+          HI,&nbsp I'M &nbsp ARYAN &nbsp KUMAR, &nbsp A &nbsp CSE &nbsp UNDERGRADUATE &nbsp AND &nbsp AN &nbsp ASPIRING &nbsp UI/UX &nbsp DESIGNER
+        </p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
