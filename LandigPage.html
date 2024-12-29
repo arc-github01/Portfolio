@@ -7,12 +7,14 @@
   <style>
 
       .binaryImage {
-      width: 950px;
+      width: 1000px;
       height: auto;
       margin: -180px -20px;
       transform: translateX(10px);
+      transition: transform 0.3s ease; /* Add smooth transition for rotation */
       
     }
+    
     .title {
       color: rgba(255, 255, 255, 1);
       font: 20 19px Camouflage, -apple-system, Roboto, Helvetica, sans-serif;
@@ -229,6 +231,7 @@
           src="Group 7.svg" 
           alt="Binary Image" 
           class="binaryImage"
+          id="binaryImage"
         />
 
         <p class="subtitle">
@@ -237,5 +240,35 @@
       </div>
     </section>
   </main>
+  <script>
+    let lastX = 0;
+    let currentRotation = 0;
+    const rotationSensitivity = 0.01; // Adjust this value to control rotation speed
+    const maxRotation = 5; // Maximum rotation in degrees
+    const binaryImage = document.getElementById('binaryImage');
+
+    document.addEventListener('mousemove', (e) => {
+      const deltaX = e.clientX - lastX;
+      lastX = e.clientX;
+
+      // Update rotation based on cursor movement
+      if (deltaX !== 0) {
+        // Calculate new rotation
+        currentRotation += deltaX * rotationSensitivity;
+        
+        // Limit rotation to maxRotation degrees
+        currentRotation = Math.max(-maxRotation, Math.min(maxRotation, currentRotation));
+        
+        // Apply rotation transformation
+        binaryImage.style.transform = `translateX(10px) rotate(${currentRotation}deg)`;
+      }
+    });
+
+    // Reset rotation when cursor leaves the window
+    document.addEventListener('mouseleave', () => {
+      currentRotation = 0;
+      binaryImage.style.transform = 'translateX(10px) rotate(0deg)';
+    });
+</script>
 </body>
 </html>
