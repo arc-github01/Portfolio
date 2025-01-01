@@ -71,6 +71,18 @@
             opacity: 0.8; /* Slightly transparent */
         }
 
+        .third-image {
+        width: 250px;
+        height: auto;
+        position: absolute;
+        top: 40%;
+        left: 30%;
+        transform: translate(-80%, -100%);
+        transition: transform 0.1s ease-out;
+        z-index: 1;
+        opacity: 0.8;
+    }
+
         /* Left Navigation Bar */
         .navigationList {
             display: flex;
@@ -172,6 +184,7 @@
             <div class="center-content">
                 <img src="Binary_001_s.png" alt="Binary Pattern" class="center-image" id="centerImage">
                 <img src="Binary_002.png" alt="Second Binary Pattern" class="second-image" id="secondImage">
+                <img src="Binary_003.png" alt="Third Binary Pattern" class="third-image" id="thirdImage">
                 <p class="intro-text">HI, I'M ARYAN KUMAR, A CSE UNDERGRADUATE AND AN ASPIRING UI/UX DESIGNER</p>
             </div>
         </div>
@@ -213,6 +226,14 @@
             // Second image moves opposite to cursor (larger movement)
             secondImage.style.transform = `translate(calc(80% - ${offsetX}px), calc(-100% - ${offsetY}px))`;
         });
-    </script>
+
+        // THIRD image event listener with *50 multiplier
+        document.addEventListener('mousemove', (e) => {
+            const { innerWidth, innerHeight } = window;
+            const offsetX = ((e.clientX / innerWidth) - 0.5) * 15;
+            const offsetY = ((e.clientY / innerHeight) - 0.5) * 15;            
+            // Third image moves opposite to second image
+            thirdImage.style.transform = `translate(calc(-80% + ${offsetX * 2.8}px), calc(-100% - ${offsetY * 2.8}px))`;
+        });
 </body>
 </html>
