@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrated Homepage</title>
+    <style>
+        /* Import the Camaufalge font */
+        @font-face {
+            font-family: 'Camaufalge';
+            src: url('Camaufalge.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Geist-Regular';
+            src: url('Geist-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Geist-Thin';
+            src: url('Geist-thin.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            background-color: #222;
+            min-height: 100vh;
+            font-family: 'Product Sans', sans-serif;
+            color: white;
+        }
+
+        /* Main container */
+        .container {
+            display: flex;
+            min-height: calc(100vh - 220px); /* Adjusted to account for title space */
+            position: relative;
+        }
+
+
+
+        /* Left Navigation Bar */
+        .navigationList {
+            display: flex;
+            flex-direction: column;
+            gap: 45px;
+            position: fixed;
+            left: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+
+        .navigationItem {
+            font-size: 18px;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .navigationItem:hover {
+            color: #A6FF00;
+            transform: scale(1.1);
+        }
+
+        .mainContainer {
+            background-color: rgba(34, 34, 34, 1);
+            display: flex;
+            align-items: center;
+            gap: 40px 100px;
+            flex-wrap: wrap;
+            padding: 0 60px;
+            flex: 1;
+            justify-content: center;
+        }
+
+        /* Right-side social media icons */
+        .nav-container {
+            position: fixed;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 55px;
+            z-index: 10;
+            /* New styles for box background */
+            background-color: rgba(0, 0, 0, 0.3); /* Dark semi-transparent background */
+            padding: 20px;  /* Add some padding around the icons */
+            border-radius: 40px;  /* Rounded corners */
+            backdrop-filter: blur(5px);  /* Optional: adds a slight blur effect to the background */
+        }
+
+        .nav-container img {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.25s ease;
+        }
+
+        .nav-container a:hover img {
+            transform: scale(1.2);
+        }
+
+        /* Center Content */
+        .center-content {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            position: relative;
+        }
+
+        /* Introduction text */
+        .intro-text {
+            color: white;
+            font-size: 16px;
+            letter-spacing: 1px;
+            transform: translateX(60px) translateY(270px);
+            position: relative;
+            z-index: 2;
+        }
+
+        .name{
+            position: relative;
+            font-size: 50px;
+            font-family: 'Geist-Thin', sans-serif;
+            font-weight: bold;
+            color: #ffffff;
+            margin-top: 0px;
+            left: 300px;
+            top: 140px;
+        }
+
+        .subtext{
+            position: relative;
+            font-size: 20px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: lighter;
+            color: #8d8c8c;
+            margin-top: 0px;
+            left: 300px;
+            top: 145px;
+            letter-spacing:2px ;
+        }
+
+        .para{
+            position: relative;
+            font-size: 23px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: lighter;
+            color: #d9d9d9;
+            margin-top: 0px;
+            left: 300px;
+            letter-spacing:2px;
+            top: 270px;
+        }
+
+        .current{
+            display: inline;
+            position: relative;
+            font-size: 35px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: lighter;
+            color: #ffffff;
+            margin-top: 0px;
+            left: 300px;
+            letter-spacing:2px;
+            top: 400px;
+        }
+
+        img.timeline-image {
+        position:relative ; /* or absolute */
+        top: 550px;
+        left: -130px;
+        width: 1200px;
+        height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="name"> aryan kumar,</h2>
+    <h3 class="subtext"> cse under graduate, VIT Chennai</h3>
+    <h4 class="para"> a computer science undergraduate, pursuing bachelors in computer science and engineering.<br>
+                      i love designing ui/ux and find myself coding them every now and then. Besides programmer and <br>
+                      designer, i am a guy who’s younger self, would rather want to see himself in a cockpit, but be <br> 
+                      equally excited to see himself code and build stuff! </h4>
+    
+    <h5 class ="current"> Currently | </h5>
+    <h5 class="current" style="color: #A6FF00;">Creative lead</h5>
+
+    <!-- Adding the image here -->
+    <img src="timeline.svg" alt="Timeline" class="timeline-image">
+
+    <div class="container">
+        <!-- Left Navigation Bar -->
+        <nav class="navigationList">
+            <a class="navigationItem" href="trial.html">Home</a>
+            <a class="navigationItem" href="About.html" style="color: #A6FF00;">About</a>
+            <a class="navigationItem" href="#projects">Projects</a>
+            <a class="navigationItem" href="#blog">Blog</a>
+            <a class="navigationItem" href="#gallery">Gallery</a>
+        </nav>
+
+        <!-- Right-side Social Media Icons -->
+        <nav class="nav-container">
+            <a href="https://linkedin.com" target="_blank">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" alt="LinkedIn" style="filter: invert(1);">
+            </a>
+            <a href="https://google.com" target="_blank">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/google.svg" alt="Google" style="filter: invert(1);">
+            </a>
+            <a href="https://github.com" target="_blank">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg" alt="GitHub" style="filter: invert(1);">
+            </a>
+            <a href="https://whatsapp.com" target="_blank">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/whatsapp.svg" alt="WhatsApp" style="filter: invert(1);">
+            </a>
+        </nav>
+    </div>
+</body>
+</html>
