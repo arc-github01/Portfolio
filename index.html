@@ -230,10 +230,12 @@
         // THIRD image event listener with *50 multiplier
         document.addEventListener('mousemove', (e) => {
             const { innerWidth, innerHeight } = window;
-            const offsetX = ((e.clientX / innerWidth) - 0.5) * 15;
-            const offsetY = ((e.clientY / innerHeight) - 0.5) * 15;            
-            // Third image moves opposite to second image
-            thirdImage.style.transform = `translate(calc(-80% + ${offsetX * 2.8}px), calc(-100% - ${offsetY * 2.8}px))`;
+            const offsetX = ((e.clientX / innerWidth) - 0.5) * 30;
+            const offsetY = ((e.clientY / innerHeight) - 0.5) * 20;
+            
+            // 3RD image moves opposite to cursor (larger movement)
+            thirdImage.style.transform = `translate(calc(-150% - ${offsetY}px + ${offsetX}px*0.5), calc(-100% + ${offsetX}px))`;
         });
+    </script>
 </body>
 </html>
